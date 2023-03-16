@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import "./ProfilePage.css";
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import routeService from '../../services/route.service';
 import { AuthContext } from '../../context/auth.context';
 import Navbar from '../../components/Navbar/Navbar'
