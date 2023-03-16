@@ -7,13 +7,10 @@ import Navbar from '../../components/Navbar/Navbar'
 
 function ProfilePage() {
 
-  const { user } = useContext(AuthContext)
+  const { user, isLoggedIn } = useContext(AuthContext)
 
   const [currentUser, setCurrentUser] = useState(null)
 
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [avatarUrl, setAvatarUrl] = useState("");
 
   const [isLoading, setIsLoading] = useState(true)
 
@@ -30,7 +27,7 @@ function ProfilePage() {
 
   return (
     <>
-      {!isLoading &&
+      {!isLoading && isLoggedIn &&
         <>
           <Navbar />
           <div className='container-profile'>

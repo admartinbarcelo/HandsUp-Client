@@ -4,7 +4,6 @@ import { uploadImage } from '../../services/upload.service';
 import routeService from '../../services/route.service';
 import { AuthContext } from '../../context/auth.context';
 import Navbar from '../Navbar/Navbar';
-import isThisQuarter from 'date-fns/isThisQuarter';
 
 function FormEditProfile() {
 
@@ -62,9 +61,6 @@ function FormEditProfile() {
             .catch(err => console.log("Error while updating the profile: ", err))
     }
 
-    console.log("USER", user)
-
-    console.log("CURRENT USER", currentUser)
 
     return (
         <>
